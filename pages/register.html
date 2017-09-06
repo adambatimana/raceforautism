@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inbrowser Assignment</title>
+	<link rel="stylesheet" href="../css/fontello.css">
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/styleV02.css">
+	<script src="../scripts/modernizr-custom.js"></script>
+	<script src="../scripts/jquery-1.12.1.min.js"></script>
+  	<script src="../scripts/jquery.validate_t.js"></script>
+  	<script>
+$(document).ready( function(){
+$('#nbscontact').validate({
+	onfocusout:function(element){
+		$(element).valid();
+	}, //end of first argument proceed to the next one
+rules:{
+	fname: 'required',
+	lname: 'required',
+	email:{
+		required: true,
+		email:true
+	}
+//if I want to add more rules I would do it here.
+
+}, //end of rules
+messages:{
+	fname:{
+		//this message will over write the message in the title attribute
+		required: "Please tell us your hero first name."
+	},
+	lname:{
+		required: "Please tell us your hero last name."
+	},
+	email:{
+		required: "Your email is required so we can send you a superhero signal for the race.",
+		email: "This is not the right format. Please correct."
+	}
+ }//end of messages
+
+
+});	
+
+ });//end of validate
+  	</script>
+
+</head>
+<body id="nregister">
+	
+	<header id="pageHeader" class="cf" >
+		<div class="logo"><a href="../index.html"><img src="../images/head-logo-2.png"  alt="Logo header"></a></div>
+		<ul class="hsocial cf">
+			<li class="fb"><a href="https://www.facebook.com/NationalFoundationforAutismResearch/" target="_blank"></a></li>
+			<li class="instagram"><a href="https://www.instagram.com/nfarorg/" target="_blank"></a></li>
+			<li class="twitter"><a href="https://twitter.com/nfarorg" target="_blank"></a></li>
+			<li class="pintrest"><a href="https://www.pinterest.com/NFARorg/" target="_blank"></a></li>
+			<li class="linkedin"><a href="https://www.linkedin.com/groups/126266/profile" target="_blank"></a></li>
+		</ul>
+		<div class="banner cf">
+			<h1>Be A Hero For Those with Autism</h1>
+		</div>
+	</header>
+
+	<nav class="cf">
+		
+
+		<ul class="global cf">
+			<li ><a class="current" href="register.html">Register</a></li>
+			<li><a href="location.html">Location</a></li>
+		</ul>
+	</nav>
+
+	<main class="cf">
+
+		<!-- ADD CONTACT FORM -->
+		<div class="cform">
+			<form class="contactform" name="nbscontact" id="nbscontact" method="post" action="formprocessor.php">
+				<h3>REGISTER</h3>
+				<p>Sign up here, If you would like to be a superhero for those with Autism. </p>
+				<label for="fname"><i class="icon-user-outline"></i> First Name:</label>
+				<input type="text" name="fname" id="fname" placeholder="Bruce" class="required" required>
+
+				<label for="lname">Last Name:</label>
+				<input type="text" name="lname" id="lname" placeholder="Wayne" class="required" required>
+
+				<label for="phone"><i class="icon-mobile"></i> Phone Number:</label>
+				<input type="text" name="phone" id="phone" placeholder="xxx-xx-xxx">
+
+				<label for="email"><i class="icon-mail-1"></i> Email Address:</label>
+				<input type="text" name="email" id="email" placeholder="brucewayne@wayneenterprise.com" class="required" required>
+
+				<label for="tname"><i class="icon-users-outline"></i> Team Name:</label>
+				<input type="text" name="tname" id="tname" placeholder="Team Batman">
+
+				<fieldset><legend>Shirt Size:</legend>
+					<input type="radio" name="services" id="smallshirt" value="shirtsize" >
+					<label for="smallshirt">Small</label>
+
+
+					<input type="radio" name="services" id="mediumshirt" value="shirtsize" >
+					<label for="mediumshirt">Medium</label>
+
+					<input type="radio" name="services" id="largeshirt" value="shirtsize" >
+					<label for="largeshirt">Large</label>
+				</fieldset>
+				<br/>
+				<input type="submit" name="submit" value="Submit" />
+			</form>
+		</div>
+		<a href="https://vimeo.com/149810640" target="_blank">
+			<h3 class="vHeader">2015 Recap Video</h3>
+			<p>(Click here to watch or watch in window below)</p>
+		</a>
+		<div class="video">
+			<a href="https://vimeo.com/149810640" target="_blank"><img src="../images/nojsvideothumb-min.jpg" alt="watch video here">Watch Video In Vimeo</a>
+			<iframe src="https://player.vimeo.com/video/149810640" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+		</div>
+		<figure class="cf">
+				
+				<figcaption>
+					<h2>RACE DAY REGISTRATION:</h2>
+					<p>Registration opens at 6:45 am Race Day morning. We accept credit cards, checks or cash.</p>
+					<p> Day of Race pricing is:</p>  
+					<ul class="price">
+						<li>Adults $40</li>
+						<li>Youth (13-17 years old) $35</li>
+						<li>Children (12 and under)  $30</li>
+						<li>Chip Timing $5</li>
+					</ul>
+					<p>Race Day Pick-up: You will be able to pick up your Bib and T-shirt on Race Day morning starting at 6:45 AM.</p>
+				</figcaption>
+			</figure>	
+
+		</main>
+
+		<aside class="cf">
+
+<img src="../images/registrationmheader.jpg" alt="registration header">
+			<figure class=" cf">
+				
+				<figcaption>
+					<h2>BE A SUPERHERO FOR THOSE WITH AUTISM!</h2>
+					<p class="description">100% of the funds raised at the Race for Autism stays in San Diego to support local autism programs, services, treatments, outreach efforts and educational initiatives to hundreds of classrooms. </p>
+					<p>THANKS to support of people like you, NFAR has awarded over a MILLION dollars to community programs and classrooms throughout San Diego.</p>
+				</figcaption>
+			</figure>
+			<figure class="feature cf">
+				<figcaption>
+					<h2>Donations</h2>
+					<p class="description">Enter your offline donations (checks, cash) as offline donations in your fundraising page, and turn these in at the Donation booth next to the NFAR Tent</p>
+					<p class="description">Donate to National Foundation for Autism Research
+					</p>
+					<p>Attn: Race for Autism</p>
+					<p>PO Box 502177
+						San Diego CA 92150</p>
+					<p>Please be use to include your name with donations mailed in so we may add them to your fundraising.</p>
+				</figcaption>
+				</figure>
+
+			<figure class="feature cf">
+				<figcaption>
+					<h2>Prizes</h2>
+					<p class="description">Your fundraising efforts are very important and provide the funds necessary to operate the programs that positively impact children, teens, young adults and families affected by autism here in San Diego. To thank you, we have terrific prize packages, provided by our generous sponsors! Donations will be accepted through April 2nd.</p>
+				</figcaption>
+			</figure>
+			<figure class="feature cf">
+				<figcaption>
+					<h2>Online Registration</h2>
+					<p class="description">Online registration will be open until 6:00 pm Friday so do not forget to invite those last minute friends and family</p>
+				</figcaption>
+			</figure>
+			
+
+				<figure class="feature cf">
+					<figcaption>
+						<h2>Race from home</h2>
+						<p class="description">Not available on Race Day?  You can still be a hero by selecting the "Race from Home" option when registering.
+							We will mail you a bib, Race T-shirt and finisher medal the Monday following the Race!</p>
+						</figcaption>
+					</figure>
+
+					<figure class="feature cf">
+						<figcaption>
+							<h2>Runners Awards</h2>
+							<p class="description">Award medals will be presented to the top three male and female finishers in age divisions: 12 &amp; under,13-17, 18-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65-69, 70-74, 75-79 and 80+.</p>
+						</figcaption>
+					</figure>
+
+				</aside>
+
+				<footer class="cf">
+					<section class="contact">
+						<h2>Contact Us</h2>
+						<p class="description">National Foundation for Autism Research</p>
+						<p class="description">PO Box 502177, San Diego, CA 92150</p>
+						<p class="description">P&colon; <a href="tel:858-679-8800" class="phone">858.679.8800</a></p>
+					</section>
+
+					<section class="fsocial">
+						<h2>Follow Us</h2> 
+						<ul class="social cf">
+							<li class="fb"><a href="https://www.facebook.com/NationalFoundationforAutismResearch/" target="_blank"></a></li>
+							<li class="instagram"><a href="https://www.instagram.com/nfarorg/" target="_blank"></a></li>
+							<li class="twitter"><a href="https://twitter.com/nfarorg" target="_blank"></a></li>
+							<li class="pintrest"><a href="https://www.pinterest.com/NFARorg/" target="_blank"></a></li>
+							<li class="linkedin"><a href="https://www.linkedin.com/groups/126266/profile" target="_blank"></a></li>
+						</ul>
+					</section>
+
+					<section class="copy">
+						<small class="description">NFAR is a 501c3 nonprofit organization.</small>
+						<small class="description">Copyright &copy; 2014 National Foundation for Autism Research (NFAR). All Rights Reserved.</small>
+					</section>
+
+				</footer>
+			
+	</body>
+	</html>
